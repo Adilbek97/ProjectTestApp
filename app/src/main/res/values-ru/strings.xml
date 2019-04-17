@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="teacher">Учитель</string>
+    <string name="student">Студент</string>
+    <string name="prompt_email">Почта</string>
+    <string name="prompt_password">Пароль</string>
+    <string name="action_sign_in">Войтти или регистрация</string>
+    <string name="action_sign_in_short">Войтти</string>
+    <string name="text_register">Регистрация</string>
+    <string name="error_invalid_email">Этот адрес электронной почты недействителен</string>
+    <string name="error_invalid_password">Этот пароль слишком короткий</string>
+    <string name="error_incorrect_password">Неверный пароль</string>
+    <string name="error_field_required">Это поле обязательно к заполнению</string>
+    <string name="register">
+        <u>Или зарегистрируйтесь сейчас</u>
+    </string>
+    <string name="text_select_lesson">Выберите предмет</string>
+    <string name="text_view_results">Посмотреть результаты</string>
+    <string name="text_add_questions">Добавить вопросы</string>
+    <string name="text_add_subject">Добавить предмет...</string>
+    <string name="student_number">Студентский номер</string>
+    <string name="question_item_tv">Вопрос</string>
+    <string name="option_a_item_tv">Вариант A</string>
+    <string name="option_b_item_tv">Вариант B</string>
+    <string name="option_c_item_tv">Вариант C</string>
+    <string name="option_d_item_tv">Вариант D</string>
+    <string name="change_question_item_btn">изменить вопрос</string>
+    <string name="correct_option_item_tv">правильный ответ</string>
+    <string name="authenticate_activity_problem_with_internet_text">Проблема с интернетом</string>
+    <string name="authenticate_activity_wellcome_teacher_text">Добро пожаловать учитель</string>
+    <string name="authenticate_activity_wellcome_student_text">Добро пожаловать студент</string>
+    <string name="authenticate_activity_password_is_not_correct_text">Пароль не верно</string>
+    <string name="authenticate_activity_no_login_like_this_text">Такой логин нету</string>
+    <string name="reqister_activity_write_firstname_text">Пожалуйста напишите имя</string>
+    <string name="register_activity_write_lastname_text">Пожалуйста напишите фамилия</string>
+    <string name="register_activity_write_login_text">Пожалуйста напишите логин</string>
+    <string name="register_activity_write_password_text">Пожалуйста напишите пароль</string>
+    <string name="register_activity_write_password_again_text">Пожалуйста напишите пароль еше раз</string>
+    <string name="register_activity_passwords_not_equal_text">пароль не верна</string>
+    <string name="register_activity_succesfully_added_text">Успешно добавлено</string>
+    <string name="register_activity_cant_add_text">Не добавлено</string>
+    <string name="pass_test_activity_count_text">count</string>
+    <string name="pass_test_activity_prev_text">prev</string>
+    <string name="pass_test_activity_next_text">next</string>
+    <string name="result_test_activity_result_text">your result is:</string>
+    <string name="result_test_activity_go_to_main_page_btn">Go to main Page</string>
+</resources>

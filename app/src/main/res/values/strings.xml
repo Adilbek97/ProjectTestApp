@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name" translatable="false">ProjectTestApp</string>
+    <string name="teacher">Teacher</string>
+    <string name="student">Student</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="text_register">Register</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="register">
+        <u>Or Register Now</u>
+    </string>
+    <string name="text_select_lesson">Select item</string>
+    <string name="text_view_results">View results</string>
+    <string name="text_add_questions">Add questions</string>
+    <string name="text_add_subject">Add subject...</string>
+    <string name="student_number">Login</string>
+    <string name="question_item_tv">Question</string>
+    <string name="option_a_item_tv">Option A</string>
+    <string name="option_b_item_tv">option B</string>
+    <string name="option_c_item_tv">Option C</string>
+    <string name="option_d_item_tv">Option D</string>
+    <string name="change_question_item_btn">Change question</string>
+    <string name="correct_option_item_tv">correct option</string>
+    <string name="authenticate_activity_problem_with_internet_text">Problem with internet</string>
+    <string name="authenticate_activity_wellcome_teacher_text">wellcome teacher</string>
+    <string name="authenticate_activity_wellcome_student_text">wellcome student</string>
+    <string name="authenticate_activity_password_is_not_correct_text">password is not correct</string>
+    <string name="authenticate_activity_no_login_like_this_text">No login like this</string>
+    <string name="reqister_activity_write_firstname_text">please write firstname</string>
+    <string name="register_activity_write_lastname_text">please write lastname</string>
+    <string name="register_activity_write_login_text">please write login</string>
+    <string name="register_activity_write_password_text">please write password</string>
+    <string name="register_activity_write_password_again_text">please write password_again</string>
+    <string name="register_activity_passwords_not_equal_text">passwords not equal</string>
+    <string name="register_activity_succesfully_added_text">succesfully added</string>
+    <string name="register_activity_cant_add_text">can\'t add</string>
+    <string name="pass_test_activity_count_text">count</string>
+    <string name="pass_test_activity_prev_text">prev</string>
+    <string name="pass_test_activity_next_text">next</string>
+    <string name="result_test_activity_result_text">your result is:</string>
+    <string name="result_test_activity_go_to_main_page_btn">Go to main Page</string>
+
+</resources>

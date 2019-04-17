@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.projecttestapp">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity android:name=".startPage.student_page.see_students_result_page.Student_SeeResultActivity">
+        </activity>
+        <activity android:name=".startPage.student_page.result_test_page.ResultTestActivity">
+        </activity>
+        <activity android:name=".startPage.teacher_page.add_question_page.show_question_page.ShowQuestionActivity">
+        </activity>
+        <activity android:name=".startPage.teacher_page.add_subject_page.AddSubjectActivity">
+        </activity>
+        <activity android:name=".startPage.teacher_page.add_question_page.AddQuestionActivity">
+        </activity>
+        <activity android:name=".startPage.student_page.pass_test_page.PassTestActivity">
+        </activity>
+        <activity android:name=".startPage.teacher_page.see_result_page.SeeResultActivity">
+        </activity>
+        <activity android:name=".startPage.teacher_page.select_subject_page.SelectSubjectActivity">
+        </activity>
+        <activity android:name=".startPage.register_page.RegisterActivity">
+        </activity>
+        <activity android:name=".startPage.authentication_page.AuthenticationActivity">
+        </activity>
+        <activity android:name=".startPage.teacher_page.TeacherActivity">
+        </activity>
+        <activity android:name=".startPage.student_page.StudentActivity">
+        </activity>
+        <activity android:name=".startPage.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
