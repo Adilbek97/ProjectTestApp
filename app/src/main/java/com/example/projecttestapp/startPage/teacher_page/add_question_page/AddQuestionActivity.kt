@@ -18,7 +18,8 @@ class AddQuestionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_question)
-        var bundle:Bundle = intent.extras!!
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        val bundle:Bundle = intent.extras!!
         val subject = bundle.getParcelable<Subject>("subject_key")
         val intent = Intent(this, ShowQuestionActivity::class.java)
         intent.putExtra("subject_key",subject)

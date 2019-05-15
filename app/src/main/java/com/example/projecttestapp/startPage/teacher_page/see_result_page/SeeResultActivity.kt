@@ -9,6 +9,7 @@ class SeeResultActivity : AppCompatActivity(),SeeResultContract.View {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_see_result)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         mPresenter = SeeResultPresenter(this)
         mPresenter.seeResult()
     }

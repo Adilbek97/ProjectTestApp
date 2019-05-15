@@ -18,6 +18,7 @@ class ShowQuestionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_question)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         val layoutManager = LinearLayoutManager(this)
         layoutManager.orientation= LinearLayoutManager.VERTICAL
         show_question_recycler_view.layoutManager = layoutManager
@@ -34,7 +35,7 @@ class ShowQuestionActivity : AppCompatActivity() {
                 showToast("We can't get quetion")
             }
             override fun onResponse(call: Call<ArrayList<Question>>, response: Response<ArrayList<Question>>) {
-                val subject = intent.extras!!.getParcelable<Subject>("subject_key")
+                val subject = intent.extras!!.getParcelable("subject_key") as Subject
                 var showQuestionAdapter: ShowQuestionAdapter = ShowQuestionAdapter(
                     this@ShowQuestionActivity,
                     sortQuestions(response.body()!!,subject.id),subject)

@@ -20,6 +20,7 @@ class AddSubjectActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_subject)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         //------ setting Shared Preferences
         sharedPreferences  = getSharedPreferences(Constants.APP_PREFERENCES, Context.MODE_PRIVATE)
         //-----------------------

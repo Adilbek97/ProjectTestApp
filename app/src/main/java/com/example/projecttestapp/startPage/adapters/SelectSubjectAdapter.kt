@@ -2,7 +2,9 @@ package com.example.projecttestapp.startPage.adapters
 
 import android.content.Context
 import android.content.Intent
+import android.support.v7.app.AlertDialog
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +16,7 @@ import com.example.projecttestapp.startPage.student_page.pass_test_page.PassTest
 import com.example.projecttestapp.startPage.teacher_page.add_question_page.AddQuestionActivity
 import com.example.projecttestapp.startPage.teacher_page.add_subject_page.AddSubjectActivity
 import com.example.projecttestapp.startPage.teacher_page.see_result_page.SeeResultActivity
+import com.example.projecttestapp.startPage.teacher_page.select_subject_page.delete_subject_doing.DeleteSubject
 import kotlinx.android.synthetic.main.select_subject_item.view.*
 
 class SelectSubjectAdapter(val context: Context, var result: ArrayList<Subject>, val activity_id: Int) :
@@ -75,6 +78,17 @@ class SelectSubjectAdapter(val context: Context, var result: ArrayList<Subject>,
                 intent.putExtra("results_key", currentSubject?.results)
                 context.startActivity(intent)
             }
+            if (activity_id == 5){
+                itemView.select_subject_delete_ic.visibility = View.GONE
+            }
+            itemView.select_subject_delete_ic.setOnClickListener {
+                if (activity_id != 5) {
+                    MyAlertDialog(currentSubject)
+                }else{
+                    context.showToast("you can't delete subject")
+                }
+            }
+
         }
 
         fun setData(subject: Subject?, position: Int) {
@@ -87,11 +101,35 @@ class SelectSubjectAdapter(val context: Context, var result: ArrayList<Subject>,
     inner class FooterHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         init {
             itemView.setOnClickListener {
-                val intent = Intent(context, AddSubjectActivity::class.java)
-                context.startActivity(intent)
-
-                context.showToast("Add subject")
+                if (activity_id != 5) {
+                    val intent = Intent(context, AddSubjectActivity::class.java)
+                    context.startActivity(intent)
+                    context.showToast("Add subject")
+                }else{
+                    context.showToast("you can't add subject")
+                }
             }
+        }
+    }
+    inner class MyAlertDialog(var subject: Subject?){
+        val alertDialogBuilder = AlertDialog.Builder(context)
+        init {
+            alertDialogBuilder.setTitle("Do you want to delete the subject ${subject!!.name}")
+            alertDialogBuilder.setMessage("message ")
+            alertDialogBuilder.setPositiveButton("Yes"){dialog,which ->
+                Log.i("SelectSubjectAdapater","Yes cliked")
+                DeleteSubject(this@SelectSubjectAdapter,context,subject!!.id).execute()
+            }
+            alertDialogBuilder.setNegativeButton("No"){dialog,which ->
+                Toast.makeText(context,"You are not agree.",Toast.LENGTH_SHORT).show()
+                Log.i("SelectSubjectAdapater","No cliked")
+            }
+            alertDialogBuilder.setNeutralButton("Cancel"){_,_ ->
+                Toast.makeText(context,"You cancelled the dialog.",Toast.LENGTH_SHORT).show()
+                Log.i("SelectSubjectAdapater","Canceled")
+            }
+            val dialog: AlertDialog = alertDialogBuilder.create()
+            dialog.show()
         }
     }
 }

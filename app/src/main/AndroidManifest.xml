@@ -11,19 +11,36 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".startPage.student_page.see_students_result_page.Student_SeeResultActivity">
+        <activity
+                android:name=".startPage.teacher_page.add_question_page.show_question_page.change_question_page.ChangeQuestionActivity">
         </activity>
-        <activity android:name=".startPage.student_page.result_test_page.ResultTestActivity">
+        <activity
+                android:name=".startPage.student_page.see_students_result_page.Student_SeeResultActivity"
+                android:parentActivityName=".startPage.student_page.StudentActivity">
         </activity>
-        <activity android:name=".startPage.teacher_page.add_question_page.show_question_page.ShowQuestionActivity">
+        <activity
+                android:name=".startPage.student_page.result_test_page.ResultTestActivity"
+                android:parentActivityName=".startPage.student_page.StudentActivity">
         </activity>
-        <activity android:name=".startPage.teacher_page.add_subject_page.AddSubjectActivity">
+        <activity
+                android:name=".startPage.teacher_page.add_question_page.show_question_page.ShowQuestionActivity"
+                android:parentActivityName=".startPage.teacher_page.TeacherActivity">
         </activity>
-        <activity android:name=".startPage.teacher_page.add_question_page.AddQuestionActivity">
+        <activity
+                android:name=".startPage.teacher_page.add_subject_page.AddSubjectActivity"
+                android:parentActivityName=".startPage.teacher_page.TeacherActivity">
         </activity>
-        <activity android:name=".startPage.student_page.pass_test_page.PassTestActivity">
+        <activity
+                android:name=".startPage.teacher_page.add_question_page.AddQuestionActivity"
+                android:parentActivityName=".startPage.teacher_page.TeacherActivity">
         </activity>
-        <activity android:name=".startPage.teacher_page.see_result_page.SeeResultActivity">
+        <activity
+                android:name=".startPage.student_page.pass_test_page.PassTestActivity"
+                android:parentActivityName=".startPage.student_page.StudentActivity">
+        </activity>
+        <activity
+                android:name=".startPage.teacher_page.see_result_page.SeeResultActivity"
+                android:parentActivityName=".startPage.teacher_page.TeacherActivity">
         </activity>
         <activity android:name=".startPage.teacher_page.select_subject_page.SelectSubjectActivity">
         </activity>

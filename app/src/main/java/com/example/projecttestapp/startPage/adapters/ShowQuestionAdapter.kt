@@ -11,6 +11,7 @@ import com.example.projecttestapp.startPage.models.Question
 import com.example.projecttestapp.startPage.models.Subject
 import com.example.projecttestapp.startPage.showToast
 import com.example.projecttestapp.startPage.teacher_page.add_question_page.AddQuestionActivity
+import com.example.projecttestapp.startPage.teacher_page.add_question_page.show_question_page.change_question_page.ChangeQuestionActivity
 import kotlinx.android.synthetic.main.question_item.view.*
 import kotlinx.android.synthetic.main.show_question_adapter_footer_item.view.*
 
@@ -72,6 +73,10 @@ class ShowQuestionAdapter(val context: Context, var question:ArrayList<Question>
             itemView.item_correct_option_et.text = currentQuestion!!.correctOption
             itemView.item_changeQuestion_btn.setOnClickListener {
                 context.showToast("woul you like to change this question")
+                val intent=Intent(context, ChangeQuestionActivity::class.java)
+                intent.putExtra("currentQuestionKey",currentQuestion)
+                intent.putExtra("subject_key",subject)
+                context.startActivity(intent)
             }
         }
     }

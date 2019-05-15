@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".startPage.teacher_page.add_question_page.show_question_page.change_question_page.ChangeQuestionActivity">
+    <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="15dp">
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <TextView
+                    android:id="@+id/changeActivity_subject_name_tv"
+                    android:text="subject"
+                    android:textSize="30sp"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            <EditText
+                    android:id="@+id/changeActivity_question_et"
+                    android:layout_width="match_parent"
+                    android:hint="Question"
+                    android:layout_height="135dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="20sp"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"/>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+                <EditText
+                        android:id="@+id/changeActivity_optionA_et"
+                        android:layout_weight="1"
+                        android:hint="Variant A"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        android:textSize="20sp"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_horizontal"/>
+                <EditText
+                        android:id="@+id/changeActivity_optionB_et"
+                        android:layout_weight="1"
+                        android:hint="Variant B"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        android:textSize="20sp"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+
+            >
+                <EditText
+                        android:id="@+id/changeActivity_optionC_et"
+                        android:layout_weight="1"
+                        android:hint="Variant C"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        android:textSize="20sp"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_horizontal"/>
+                <EditText
+                        android:id="@+id/changeActivity_optionD_et"
+                        android:layout_weight="1"
+                        android:hint="Variant D"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_margin="10dp"
+                        android:textSize="20sp"
+                        android:gravity="center_horizontal"
+                        android:layout_gravity="center_horizontal"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <EditText
+                        android:id="@+id/changeActivity_correct_option_et"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_text_style"
+                        android:textSize="20sp"
+                        android:hint="correct variant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                <Button
+                        android:id="@+id/changeActivity_UpdateQuestion_btn"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_style"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Update question"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
