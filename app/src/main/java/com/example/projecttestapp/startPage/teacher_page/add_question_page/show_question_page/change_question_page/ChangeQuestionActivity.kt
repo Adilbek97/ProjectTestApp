@@ -7,6 +7,10 @@ import kotlinx.android.synthetic.main.activity_change_question.*
 
 class ChangeQuestionActivity : AppCompatActivity() {
     lateinit var presenter: ChangeQuestionPresenter
+    companion object {
+        val TAG:String = "ChangeQuestionActivity"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_change_question)

@@ -54,7 +54,7 @@ interface ApiService {
     fun addQuestion(@Body question: Question):retrofit2.Call<Question>
 
     @PUT("api/questions/{id}/")
-    fun updateQuestion(@Body question: Question):retrofit2.Call<Question>
+    fun updateQuestion(@Path("id")id:Int, @Body question: Question):retrofit2.Call<Question>
 
     @DELETE("api/questions/{id}/")
     fun deleteQuestion(@Path("id")id:Int):retrofit2.Call<Unit>

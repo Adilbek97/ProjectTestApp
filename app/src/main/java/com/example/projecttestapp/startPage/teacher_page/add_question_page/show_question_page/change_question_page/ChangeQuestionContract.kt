@@ -6,7 +6,7 @@ import com.example.projecttestapp.startPage.models.Question
 interface ChangeQuestionContract {
     interface Model{
         interface OnFinishedListener{
-            fun onFinishedUpdate()
+            fun onFinishedUpdate(question: Question)
             fun onFailure(t: Throwable)
         }
         fun updateQuestion(onFinishedListener: OnFinishedListener,question: Question)
