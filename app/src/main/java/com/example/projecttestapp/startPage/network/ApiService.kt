@@ -53,8 +53,11 @@ interface ApiService {
     @POST("api/questions/")
     fun addQuestion(@Body question: Question):retrofit2.Call<Question>
 
-    @PATCH("api/questions/{id}/")
+    @PUT("api/questions/{id}/")
     fun updateQuestion(@Body question: Question):retrofit2.Call<Question>
+
+    @DELETE("api/questions/{id}/")
+    fun deleteQuestion(@Path("id")id:Int):retrofit2.Call<Unit>
 
     //actions for results
     @GET("api/results/")

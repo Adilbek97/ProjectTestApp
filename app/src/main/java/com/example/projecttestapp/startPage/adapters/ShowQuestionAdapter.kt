@@ -2,16 +2,21 @@ package com.example.projecttestapp.startPage.adapters
 
 import android.content.Context
 import android.content.Intent
+import android.support.v7.app.AlertDialog
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.example.projecttestapp.R
 import com.example.projecttestapp.startPage.models.Question
 import com.example.projecttestapp.startPage.models.Subject
 import com.example.projecttestapp.startPage.showToast
 import com.example.projecttestapp.startPage.teacher_page.add_question_page.AddQuestionActivity
 import com.example.projecttestapp.startPage.teacher_page.add_question_page.show_question_page.change_question_page.ChangeQuestionActivity
+import com.example.projecttestapp.startPage.teacher_page.add_question_page.show_question_page.delete_question_doing.DeleteQuestion
+import com.example.projecttestapp.startPage.teacher_page.select_subject_page.delete_subject_doing.DeleteSubject
 import kotlinx.android.synthetic.main.question_item.view.*
 import kotlinx.android.synthetic.main.show_question_adapter_footer_item.view.*
 
@@ -78,6 +83,11 @@ class ShowQuestionAdapter(val context: Context, var question:ArrayList<Question>
                 intent.putExtra("subject_key",subject)
                 context.startActivity(intent)
             }
+
+            itemView.show_questions_item_delete_btn.setOnClickListener {
+                context.showToast("delete btn")
+                DeleteAlertDialog(currentQuestion)
+            }
         }
     }
     inner class FooterHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -94,6 +104,27 @@ class ShowQuestionAdapter(val context: Context, var question:ArrayList<Question>
             itemView.show_question_item_tv.text = subject.name
             itemView.show_question_item_tv.textSize = 20F
 
+        }
+    }
+    inner class DeleteAlertDialog(var question: Question??){
+        val alertDialogBuilder = AlertDialog.Builder(context)
+        init {
+            alertDialogBuilder.setTitle("Do you want to delete the question ${question!!.question}")
+            alertDialogBuilder.setMessage("message ")
+            alertDialogBuilder.setPositiveButton("Yes"){dialog,which ->
+                Log.i("ShowQuestionAdapater","Yes cliked")
+                DeleteQuestion(context,question!!.id).execute()
+            }
+            alertDialogBuilder.setNegativeButton("No"){dialog,which ->
+                Toast.makeText(context,"You are not agree.", Toast.LENGTH_SHORT).show()
+                Log.i("ShowQuestionAdapater","No cliked")
+            }
+            alertDialogBuilder.setNeutralButton("Cancel"){_,_ ->
+                Toast.makeText(context,"You cancelled the dialog.", Toast.LENGTH_SHORT).show()
+                Log.i("ShowQuestionAdapater","Canceled")
+            }
+            val dialog: AlertDialog = alertDialogBuilder.create()
+            dialog.show()
         }
     }
 }

@@ -39,7 +39,6 @@ class ShowQuestionActivity : AppCompatActivity() {
                 var showQuestionAdapter: ShowQuestionAdapter = ShowQuestionAdapter(
                     this@ShowQuestionActivity,
                     sortQuestions(response.body()!!,subject.id),subject)
-
                 show_question_recycler_view.adapter = showQuestionAdapter
             }
         })
